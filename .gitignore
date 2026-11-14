@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+.playwright-mcp/
+dist/
+
+# OS & editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Artefak
+*.zip
+*.log
+arsip/

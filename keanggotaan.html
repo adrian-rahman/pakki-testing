@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keanggotaan - PAKKI</title>
+<meta name="description" content="Cek status anggota PAKKI, syarat registrasi, iuran tahunan, dan KTA digital ber-QR.">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Lewati ke konten utama</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="PAKKI - Halaman utama">
+      <img src="assets/logo-pakki.png" alt="">
+      <span class="word">
+        <b>PAKKI</b>
+        <small>Perhimpunan Ahli Kesehatan Kerja Indonesia</small>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Navigasi utama">
+      <a href="index.html">Tentang</a>
+      <a href="struktur.html">Struktur</a>
+      <a href="keanggotaan.html" aria-current="page">Keanggotaan</a>
+      <a href="berita.html">Berita</a>
+      <details class="nav-dd">
+        <summary>Kontak</summary>
+        <div class="dd-panel">
+          <div class="dd-title">Kontak Kami</div>
+          <a href="mailto:sekretariat@pakki.id">sekretariat@pakki.id</a>
+          <a href="https://www.instagram.com/pakki_pusat/" target="_blank" rel="noopener">Instagram @pakki_pusat</a>
+          <a href="https://youtube.com/@pakkigroup7712" target="_blank" rel="noopener">YouTube @pakkigroup7712</a>
+        </div>
+      </details>
+    </nav>
+
+    <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false" aria-controls="drawer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="index.html">Beranda</a>
+        <span class="sep">/</span>
+        <span aria-current="page">Keanggotaan</span>
+      </nav>
+      <h1>Keanggotaan</h1>
+      <p class="page-lede">Verifikasi status anggota, ketahui syarat pendaftaran, rincian iuran, dan cara kerja KTA digital PAKKI.</p>
+    </div>
+  </section>
+
+  <div class="subnav-wrap">
+    <div class="wrap">
+      <nav class="subnav" aria-label="Bagian halaman keanggotaan">
+        <a href="#verifikasi">Verifikasi</a>
+        <a href="#registrasi">Registrasi</a>
+        <a href="#iuran">Iuran</a>
+        <a href="#kta-digital">KTA Digital</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ================= VERIFIKASI ================= -->
+  <section class="sec anchor" id="verifikasi">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>Pastikan keabsahan anggota sebelum bekerja sama</h2>
+          <p class="lede">Perusahaan, instansi, dan mitra dapat memverifikasi status keaktifan serta keabsahan KTA anggota. Gratis dan tanpa login.</p>
+        </div>
+      </div>
+
+      <div class="check-grid">
+        <div class="check-copy">
+          <ol class="steps">
+            <li class="step">
+              <div><b>Masukkan Nomor Anggota atau NIK</b><span>Nomor Anggota tercantum pada KTA digital anggota.</span></div>
+            </li>
+            <li class="step">
+              <div><b>Sistem mencocokkan data DPP</b><span>Pencocokan dilakukan terhadap basis data keanggotaan resmi.</span></div>
+            </li>
+            <li class="step">
+              <div><b>Status dan masa berlaku ditampilkan</b><span>Hasil dapat dijadikan dasar verifikasi internal instansi Anda.</span></div>
+            </li>
+          </ol>
+
+          <div class="check-note">
+            <span class="cn-label">Catatan</span>
+            <span>Data pada halaman ini adalah contoh. Verifikasi resmi hanya melalui basis data DPP PAKKI.</span>
+          </div>
+        </div>
+
+        <div class="panel check-card">
+          <div class="tabs" role="tablist" aria-label="Metode pencarian">
+            <button class="tab" type="button" role="tab" id="tab-na" aria-selected="true" aria-controls="check-panel" data-mode="na">Nomor Anggota</button>
+            <button class="tab" type="button" role="tab" id="tab-nik" aria-selected="false" aria-controls="check-panel" data-mode="nik">NIK</button>
+          </div>
+
+          <form id="check-form" novalidate>
+            <div class="field">
+              <label for="check-input">Nomor Anggota atau NIK</label>
+              <input id="check-input" name="q" type="text" inputmode="text" autocomplete="off" placeholder="PAKKI-2019-00417" aria-describedby="check-msg">
+            </div>
+            <p class="form-msg" id="check-msg" role="alert"></p>
+            <button class="btn btn-primary" id="check-btn" type="submit">Verifikasi sekarang</button>
+          </form>
+
+          <div class="hint">
+            <span>Coba contoh</span>
+            <div class="chips">
+              <button class="chip-demo" type="button" data-demo="PAKKI-2019-00417">PAKKI-2019-00417 &middot; aktif</button>
+              <button class="chip-demo" type="button" data-demo="PAKKI-2023-01104">PAKKI-2023-01104 &middot; tidak aktif</button>
+              <button class="chip-demo" type="button" data-demo="3174015205900001">NIK contoh</button>
+            </div>
+          </div>
+
+          <div class="result" id="check-result" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= REGISTRASI ================= -->
+  <section class="sec sec-tight anchor" id="registrasi">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>Menjadi anggota PAKKI</h2>
+        </div>
+      </div>
+
+      <div class="definition">
+        <p class="big">Terbuka bagi dokter perusahaan, perawat okupasi, higienis industri, dan praktisi kesehatan kerja yang memenuhi persyaratan.</p>
+        <div>
+          <div class="reqs">
+            <div class="req">
+              <div><b>Data diri dan domisili</b><span>Nama lengkap, NIK, kontak, serta domisili penempatan DPD atau DPC.</span></div>
+            </div>
+            <div class="req">
+              <div><b>Ijazah pendidikan</b><span>Ijazah pendidikan tinggi kesehatan atau kesehatan kerja, dalam maupun luar negeri yang diakui pemerintah.</span></div>
+            </div>
+            <div class="req">
+              <div><b>Sertifikat kompetensi</b><span>Sertifikat kompetensi atau profesi bagi yang dipersyaratkan.</span></div>
+            </div>
+            <div class="req">
+              <div><b>Pakta integritas</b><span>Persetujuan menaati AD/ART PAKKI dan kode etik profesi.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec-head stack-64">
+        <div>
+          <h2>Tiga jenis anggota</h2>
+          <p class="lede">Pembagian ini mengikuti Pasal 14 Anggaran Rumah Tangga PAKKI.</p>
+        </div>
+      </div>
+
+      <div class="activities">
+        <div class="activity">
+          <span class="tag">Biasa</span>
+          <div>
+            <h4>Anggota Biasa</h4>
+            <p>Warga Negara Indonesia dengan ijazah pendidikan tinggi kesehatan dan keselamatan kerja, serta sertifikat kompetensi sejak berlakunya uji kompetensi.</p>
+          </div>
+        </div>
+        <div class="activity">
+          <span class="tag">Khusus</span>
+          <div>
+            <h4>Anggota Khusus</h4>
+            <p>Ahli kesehatan dan keselamatan kerja warga negara asing yang bekerja di Indonesia, memenuhi ketentuan pemerintah, dan teregistrasi di negara asal.</p>
+          </div>
+        </div>
+        <div class="activity">
+          <span class="tag">Kehormatan</span>
+          <div>
+            <h4>Anggota Kehormatan</h4>
+            <p>Warga Negara Indonesia yang telah berjasa terhadap perkembangan kesehatan dan keselamatan kerja atau terhadap organisasi PAKKI.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="body-text mt-24">Anggota Khusus dan Anggota Kehormatan tidak memiliki hak memilih dan dipilih dalam kepengurusan.</p>
+
+      <div class="sec-head stack-64">
+        <div>
+          <h2>Dari pengajuan sampai KTA</h2>
+        </div>
+      </div>
+
+      <ol class="steps">
+        <li class="step">
+          <div><b>Ajukan data dan dokumen</b><span>Calon anggota mengirim data diri, ijazah, dan sertifikat yang diminta.</span></div>
+        </li>
+        <li class="step">
+          <div><b>Verifikasi Admin DPP</b><span>Admin memeriksa kelengkapan dan keabsahan dokumen sebelum menyetujui.</span></div>
+        </li>
+        <li class="step">
+          <div><b>Penerbitan nomor anggota dan KTA</b><span>Nomor anggota dan KTA digital diterbitkan setelah pembayaran tervalidasi.</span></div>
+        </li>
+      </ol>
+
+      <div class="callout mt-24">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+        <span><b>Formulir pendaftaran online belum tersedia.</b> Syarat, jenis anggota, dan alur di atas mengacu pada AD/ART PAKKI. Untuk pendaftaran saat ini, hubungi sekretariat DPP.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= IURAN ================= -->
+  <section class="sec sec-tight anchor" id="iuran">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>Biaya dan mekanisme pembayaran</h2>
+        </div>
+      </div>
+
+      <div class="member-grid">
+        <div>
+          <h3 class="sr-only">Mekanisme pembayaran</h3>
+          <ol class="steps">
+            <li class="step">
+              <div><b>Pembayaran</b><span>Uang pangkal dan iuran wajib tahunan dibayarkan ke rekening resmi DPP. Nomor rekening menyusul.</span></div>
+            </li>
+            <li class="step">
+              <div><b>Bukti pembayaran</b><span>Bukti transfer diunggah melalui akun anggota atau dikirim ke sekretariat.</span></div>
+            </li>
+            <li class="step">
+              <div><b>Validasi DPP</b><span>Admin memvalidasi pembayaran, lalu status keanggotaan diperbarui.</span></div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="rate">
+          <div class="rate-head">
+            <span>Biaya keanggotaan</span>
+            <b>2026</b>
+          </div>
+          <div class="rate-row">
+            <span>Uang pangkal</span>
+            <b>Rp100.000<small>sekali bayar</small></b>
+          </div>
+          <div class="rate-row">
+            <span>Iuran wajib tahunan</span>
+            <b>Rp240.000<small>&plusmn; Rp20.000 / bulan</small></b>
+          </div>
+          <p class="rate-note">Pendaftaran diverifikasi Admin DPP. KTA diterbitkan setelah pembayaran tervalidasi.</p>
+          <a class="btn btn-mint" href="mailto:sekretariat@pakki.id">Hubungi sekretariat</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= KTA DIGITAL ================= -->
+  <section class="sec sec-tight anchor" id="kta-digital">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>Kartu tanda anggota ber-QR</h2>
+        </div>
+      </div>
+
+      <div class="definition">
+        <p class="big">Setiap anggota menerima KTA digital yang dapat diperiksa keabsahannya oleh siapa pun lewat pemindaian QR.</p>
+        <div>
+          <div class="rate">
+            <div class="rate-head">
+              <span>Isi KTA</span>
+              <b>Digital</b>
+            </div>
+            <div class="rate-row"><span>Nama dan kualifikasi</span><b>Tertera</b></div>
+            <div class="rate-row"><span>Nomor anggota</span><b>Format PAKKI-YYYY-#####</b></div>
+            <div class="rate-row"><span>Wilayah</span><b>DPD / DPC</b></div>
+            <div class="rate-row"><span>Masa berlaku</span><b>Per tahun</b></div>
+            <div class="rate-row"><span>QR verifikasi</span><b>Publik</b></div>
+            <p class="rate-note">KTA diterbitkan DPP dalam format digital. QR mengarah ke hasil verifikasi publik.</p>
+          </div>
+
+          <figure class="qr-figure">
+            <img src="assets/qr-demo.png" alt="Contoh QR verifikasi anggota">
+            <figcaption>Contoh QR<br>verifikasi anggota</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-tight">
+    <div class="wrap">
+      <div class="page-cta">
+        <div>
+          <h2>Ada pertanyaan tentang keanggotaan?</h2>
+          <p>Sekretariat DPP PAKKI membantu proses pendaftaran dan validasi pembayaran.</p>
+        </div>
+        <a class="btn btn-primary" href="mailto:sekretariat@pakki.id">Kirim email</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="kontak">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/logo-pakki-white.png" alt="PAKKI">
+        <p>Perhimpunan Ahli Kesehatan Kerja Indonesia. Menghimpun dan mengembangkan profesi kesehatan kerja di seluruh Indonesia.</p>
+        <div class="foot-social">
+          <a href="https://www.instagram.com/pakki_pusat/" target="_blank" rel="noopener" aria-label="Instagram PAKKI"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://youtube.com/@pakkigroup7712" target="_blank" rel="noopener" aria-label="YouTube PAKKI"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Organisasi</h4>
+        <div class="foot-links">
+          <a href="index.html#tentang">Tentang PAKKI</a>
+          <a href="index.html#nilai">Nilai Organisasi</a>
+          <a href="index.html#lambang">Makna Lambang</a>
+          <a href="struktur.html">Struktur Organisasi</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Keanggotaan</h4>
+        <div class="foot-links">
+          <a href="keanggotaan.html#verifikasi">Cek Status Anggota</a>
+          <a href="keanggotaan.html#registrasi">Registrasi Anggota</a>
+          <a href="keanggotaan.html#iuran">Iuran &amp; Pembayaran</a>
+          <a href="keanggotaan.html#kta-digital">KTA Digital</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Sekretariat</h4>
+        <div class="foot-contact">
+          <div>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            <span>Jakarta, Indonesia<br>(alamat lengkap menyusul)</span>
+          </div>
+          <div>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            <a href="mailto:sekretariat@pakki.id">sekretariat@pakki.id</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span>&copy; <span id="year">2026</span> PAKKI - Perhimpunan Ahli Kesehatan Kerja Indonesia</span>
+    </div>
+  </div>
+</footer>
+
+<div class="backdrop" id="backdrop" hidden></div>
+<aside class="drawer" id="drawer" aria-label="Menu navigasi" aria-hidden="true" inert>
+  <div class="drawer-head">
+    <span class="brand">
+      <img src="assets/logo-pakki.png" alt="PAKKI">
+      <span class="word"><b>PAKKI</b></span>
+    </span>
+    <button class="drawer-close" id="drawer-close" aria-label="Tutup menu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <nav class="drawer-nav" aria-label="Navigasi seluler">
+    <a href="index.html">Tentang</a>
+    <a href="struktur.html">Struktur</a>
+    <a href="keanggotaan.html" aria-current="page">Keanggotaan</a>
+    <a href="berita.html">Berita</a>
+    <details>
+      <summary>Kontak <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <div class="sub">
+        <a href="mailto:sekretariat@pakki.id">sekretariat@pakki.id</a>
+        <a href="https://www.instagram.com/pakki_pusat/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://youtube.com/@pakkigroup7712" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </details>
+  </nav>
+  <div class="drawer-foot">
+    <a class="btn btn-primary" href="#verifikasi">Cek Status Anggota</a>
+    <a class="btn btn-ghost" href="#registrasi">Registrasi Anggota</a>
+  </div>
+</aside>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --color-paper: #FBFBF9;
+  --color-surface: #FFFFFF;
+  --color-ink: #101A14;
+  --color-ink-2: #3B4840;
+  --color-ink-3: #5F6B63;
+  --color-rule: #DCE1DC;
+  --color-rule-2: #C7CEC8;
+  --color-green: #0B6B3A;
+  --color-green-ink: #063D21;
+  --color-green-line: #C7DECC;
+  --color-wash: #EFF3EF;
+  --color-ok: #0B6B3A;
+  --color-ok-bg: #E8F1EA;
+  --color-warn: #8A5300;
+  --color-warn-bg: #FBF0DC;
+  --color-danger: #A4262C;
+  --color-danger-bg: #FBE9EA;
+
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+
+  --shadow-soft: 0 16px 36px -26px rgba(6, 61, 33, 0.45);
+  --shadow-btn: 0 10px 22px -14px rgba(6, 61, 33, 0.55);
+}
+
+@layer base {
+  html {
+    zoom: 1.25;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 96px;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans text-base leading-[1.65] antialiased;
+    font-optical-sizing: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply m-0 font-semibold tracking-[-0.022em] leading-[1.12] text-ink;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-green);
+    outline-offset: 3px;
+    border-radius: 16px;
+  }
+}
+
+@layer utilities {
+  .animate-fade {
+    animation: fade 0.22s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
