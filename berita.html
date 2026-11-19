@@ -6,6 +6,9 @@
 <title>Berita - PAKKI</title>
 <meta name="description" content="Kabar organisasi, agenda pelatihan, dan pembaruan regulasi kesehatan kerja dari PAKKI.">
 <link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -18,24 +21,17 @@
       <img src="assets/logo-pakki.png" alt="">
       <span class="word">
         <b>PAKKI</b>
-        <small>Perhimpunan Ahli Kesehatan Kerja Indonesia</small>
       </span>
     </a>
 
     <nav class="nav" aria-label="Navigasi utama">
+      <span class="nav-blob" aria-hidden="true"></span>
       <a href="index.html">Tentang</a>
       <a href="struktur.html">Struktur</a>
       <a href="keanggotaan.html">Keanggotaan</a>
       <a href="berita.html" aria-current="page">Berita</a>
-      <details class="nav-dd">
-        <summary>Kontak</summary>
-        <div class="dd-panel">
-          <div class="dd-title">Kontak Kami</div>
-          <a href="mailto:sekretariat@pakki.id">sekretariat@pakki.id</a>
-          <a href="https://www.instagram.com/pakki_pusat/" target="_blank" rel="noopener">Instagram @pakki_pusat</a>
-          <a href="https://youtube.com/@pakkigroup7712" target="_blank" rel="noopener">YouTube @pakkigroup7712</a>
-        </div>
-      </details>
+      <a href="kontak.html">Kontak</a>
+      <a class="nav-cta" href="keanggotaan.html#registrasi">Daftar Sekarang</a>
     </nav>
 
     <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false" aria-controls="drawer">
@@ -58,15 +54,9 @@
     </div>
   </section>
 
-  <section class="sec">
+  <section class="sec sec-compact">
     <div class="wrap">
-      <div class="sec-head">
-        <div>
-          <h2>Informasi terbaru</h2>
-        </div>
-      </div>
-
-      <div class="articles">
+      <div class="articles articles-separate">
         <article class="article">
           <div class="thumb-ph" role="img" aria-label="Placeholder gambar berita"><span>Gambar 16:9</span></div>
           <div class="article-body">
@@ -155,6 +145,10 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
             <a href="mailto:sekretariat@pakki.id">sekretariat@pakki.id</a>
           </div>
+          <div>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2z"/></svg>
+            <a href="kontak.html">Formulir kontak</a>
+          </div>
         </div>
       </div>
     </div>
@@ -181,14 +175,7 @@
     <a href="struktur.html">Struktur</a>
     <a href="keanggotaan.html">Keanggotaan</a>
     <a href="berita.html" aria-current="page">Berita</a>
-    <details>
-      <summary>Kontak <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
-      <div class="sub">
-        <a href="mailto:sekretariat@pakki.id">sekretariat@pakki.id</a>
-        <a href="https://www.instagram.com/pakki_pusat/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://youtube.com/@pakkigroup7712" target="_blank" rel="noopener">YouTube</a>
-      </div>
-    </details>
+    <a href="kontak.html">Kontak</a>
   </nav>
   <div class="drawer-foot">
     <a class="btn btn-primary" href="keanggotaan.html#verifikasi">Cek Status Anggota</a>

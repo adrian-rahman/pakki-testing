@@ -3,9 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PAKKI - Perhimpunan Ahli Kesehatan Kerja Indonesia</title>
+<title>PAKKI</title>
 <meta name="description" content="PAKKI menghimpun dokter perusahaan, perawat okupasi, dan higienis industri Indonesia. Profil organisasi, struktur, kegiatan, dan keanggotaan.">
 <link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -18,24 +21,17 @@
       <img src="assets/logo-pakki.png" alt="">
       <span class="word">
         <b>PAKKI</b>
-        <small>Perhimpunan Ahli Kesehatan Kerja Indonesia</small>
       </span>
     </a>
 
     <nav class="nav" aria-label="Navigasi utama">
+      <span class="nav-blob" aria-hidden="true"></span>
       <a href="index.html" aria-current="page">Tentang</a>
       <a href="struktur.html">Struktur</a>
       <a href="keanggotaan.html">Keanggotaan</a>
       <a href="berita.html">Berita</a>
-      <details class="nav-dd">
-        <summary>Kontak</summary>
-        <div class="dd-panel">
-          <div class="dd-title">Kontak Kami</div>
-          <a href="mailto:sekretariat@pakki.id">sekretariat@pakki.id</a>
-          <a href="https://www.instagram.com/pakki_pusat/" target="_blank" rel="noopener">Instagram @pakki_pusat</a>
-          <a href="https://youtube.com/@pakkigroup7712" target="_blank" rel="noopener">YouTube @pakkigroup7712</a>
-        </div>
-      </details>
+      <a href="kontak.html">Kontak</a>
+      <a class="nav-cta" href="keanggotaan.html#registrasi">Daftar Sekarang</a>
     </nav>
 
     <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false" aria-controls="drawer">
@@ -54,8 +50,8 @@
         <p class="lede">PAKKI menghimpun dokter perusahaan, perawat okupasi, dan higienis industri di seluruh Indonesia - memastikan standar profesi, etika, dan kontribusi nyata di setiap tempat kerja.</p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary btn-lg" href="keanggotaan.html#verifikasi">
-            Cek Keanggotaan
+          <a class="btn btn-primary btn-lg" href="keanggotaan.html#registrasi">
+            Daftar Sekarang
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
           <a class="btn btn-ghost btn-lg" href="#tentang">Kenali PAKKI</a>
@@ -76,11 +72,11 @@
   </div>
 
   <!-- ================= TENTANG ================= -->
-  <section class="sec" id="tentang">
+  <section class="sec sec-compact" id="tentang">
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <span class="kicker"><span class="num">01</span> Tentang PAKKI</span>
+          <span class="kicker">Tentang PAKKI</span>
           <h2>Apa itu PAKKI</h2>
         </div>
       </div>
@@ -96,11 +92,11 @@
   </section>
 
   <!-- ================= TUJUAN ================= -->
-  <section class="sec sec-tight" id="tujuan">
+  <section class="sec sec-tight sec-compact" id="tujuan">
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <span class="kicker"><span class="num">02</span> Tujuan</span>
+          <span class="kicker">Tujuan</span>
           <h2>Tiga tujuan organisasi</h2>
         </div>
       </div>
@@ -120,11 +116,11 @@
   </section>
 
   <!-- ================= NILAI ================= -->
-  <section class="sec sec-tight" id="nilai">
+  <section class="sec sec-tight sec-compact" id="nilai">
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <span class="kicker"><span class="num">03</span> Nilai organisasi</span>
+          <span class="kicker">Nilai organisasi</span>
           <h2>Enam nilai yang dipegang anggota</h2>
         </div>
       </div>
@@ -156,11 +152,11 @@
   </section>
 
   <!-- ================= LAMBANG ================= -->
-  <section class="sec sec-tight" id="lambang">
+  <section class="sec sec-tight sec-compact" id="lambang">
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <span class="kicker"><span class="num">04</span> Makna lambang</span>
+          <span class="kicker">Makna lambang</span>
           <h2>Empat elemen, satu profesi</h2>
         </div>
       </div>
@@ -185,30 +181,12 @@
     </div>
   </section>
 
-  <!-- ================= KETUA UMUM ================= -->
-  <section class="leader-sec">
-    <div class="wrap">
-      <div class="leader-center">
-        <div class="portrait">
-          <svg class="portrait-ph" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-          <span class="portrait-lbl">Foto Ketua Umum</span>
-          <img class="portrait-img" src="assets/ketua-umum.jpg" alt="Foto Ketua Umum PAKKI" onerror="this.remove()">
-        </div>
-        <div class="leader-info">
-          <span class="leader-role">Ketua Umum PAKKI</span>
-          <b class="leader-name">Dr. Hendra, S.K.M., M.K.K.K.</b>
-          <span class="leader-period">Periode 2022 - 2027</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ================= KEGIATAN ================= -->
-  <section class="sec" id="kegiatan">
+  <section class="sec sec-tight sec-compact" id="kegiatan">
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <span class="kicker"><span class="num">05</span> Kegiatan</span>
+          <span class="kicker">Kegiatan</span>
           <h2>Apa saja yang dijalankan PAKKI</h2>
           <p class="lede">Kegiatan organisasi berjalan berjenjang, dari forum nasional sampai pelatihan teknis di daerah.</p>
         </div>
@@ -262,11 +240,11 @@
   </section>
 
   <!-- ================= BERITA ================= -->
-  <section class="sec sec-tight" id="berita">
+  <section class="sec sec-tight sec-compact" id="berita">
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <span class="kicker"><span class="num">06</span> Kabar</span>
+          <span class="kicker">Kabar</span>
           <h2>Informasi terbaru</h2>
         </div>
         <a class="link-more" href="berita.html">Semua berita <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -380,6 +358,10 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
             <a href="mailto:sekretariat@pakki.id">sekretariat@pakki.id</a>
           </div>
+          <div>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2z"/></svg>
+            <a href="kontak.html">Formulir kontak</a>
+          </div>
         </div>
       </div>
     </div>
@@ -406,14 +388,7 @@
     <a href="struktur.html">Struktur</a>
     <a href="keanggotaan.html">Keanggotaan</a>
     <a href="berita.html">Berita</a>
-    <details>
-      <summary>Kontak <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
-      <div class="sub">
-        <a href="mailto:sekretariat@pakki.id">sekretariat@pakki.id</a>
-        <a href="https://www.instagram.com/pakki_pusat/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://youtube.com/@pakkigroup7712" target="_blank" rel="noopener">YouTube</a>
-      </div>
-    </details>
+    <a href="kontak.html">Kontak</a>
   </nav>
   <div class="drawer-foot">
     <a class="btn btn-primary" href="keanggotaan.html#verifikasi">Cek Status Anggota</a>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontak - PAKKI</title>
+<meta name="description" content="Hubungi Sekretariat DPP PAKKI lewat formulir pesan atau email resmi organisasi.">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Lewati ke konten utama</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="PAKKI - Halaman utama">
+      <img src="assets/logo-pakki.png" alt="">
+      <span class="word">
+        <b>PAKKI</b>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Navigasi utama">
+      <span class="nav-blob" aria-hidden="true"></span>
+      <a href="index.html">Tentang</a>
+      <a href="struktur.html">Struktur</a>
+      <a href="keanggotaan.html">Keanggotaan</a>
+      <a href="berita.html">Berita</a>
+      <a href="kontak.html" aria-current="page">Kontak</a>
+      <a class="nav-cta" href="keanggotaan.html#registrasi">Daftar Sekarang</a>
+    </nav>
+
+    <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false" aria-controls="drawer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="index.html">Beranda</a>
+        <span class="sep">/</span>
+        <span aria-current="page">Kontak</span>
+      </nav>
+      <h1>Hubungi PAKKI</h1>
+      <p class="page-lede">Sampaikan pertanyaan, usulan, atau permintaan informasi ke Sekretariat DPP PAKKI. Pesan dari formulir ini diarahkan ke email resmi organisasi.</p>
+    </div>
+  </section>
+
+  <section class="sec sec-compact">
+    <div class="wrap">
+      <div class="contact-grid">
+
+        <div class="contact-main">
+          <div class="sec-head">
+            <div>
+              <span class="kicker">Formulir pesan</span>
+              <h2>Kirim pesan ke sekretariat</h2>
+              <p class="lede">Isi kolom bertanda wajib. Setelah tombol kirim ditekan, aplikasi email Anda terbuka dengan susunan pesan yang sudah siap dikirim.</p>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="c-name">Nama lengkap <span class="field-mark">Wajib</span></label>
+                <input id="c-name" name="name" type="text" autocomplete="name" placeholder="Nama Anda" required>
+              </div>
+
+              <div class="field">
+                <label for="c-email">Alamat email <span class="field-mark">Wajib</span></label>
+                <input id="c-email" name="email" type="email" autocomplete="email" placeholder="nama@perusahaan.com" required>
+              </div>
+
+              <div class="field">
+                <label for="c-org">Asal institusi <span class="field-mark">Wajib</span></label>
+                <input id="c-org" name="org" type="text" autocomplete="organization" placeholder="Perusahaan, kampus, atau instansi" required>
+              </div>
+
+              <div class="field">
+                <label for="c-phone">Nomor telepon <span class="field-mark is-optional">Opsional</span></label>
+                <input id="c-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="08xx xxxx xxxx">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="c-topic">Topik pesan</label>
+              <div class="select-wrap">
+                <select id="c-topic" name="topic">
+                  <option>Pertanyaan umum</option>
+                  <option>Keanggotaan</option>
+                  <option>Iuran dan pembayaran</option>
+                  <option>Kerja sama dan kegiatan</option>
+                  <option>Lainnya</option>
+                </select>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="c-msg">Isi pesan <span class="field-mark">Wajib</span></label>
+              <textarea id="c-msg" name="message" rows="7" maxlength="1200" placeholder="Tulis pertanyaan atau kebutuhan Anda" required></textarea>
+              <p class="field-help"><span id="c-count">0</span> / 1200 karakter</p>
+            </div>
+
+            <p class="form-msg" id="contact-msg" role="alert"></p>
+
+            <div class="contact-actions">
+              <button class="btn btn-primary" type="submit" id="contact-btn">Kirim pesan</button>
+              <p class="form-fine">Formulir ini tidak menyimpan data di situs. Pesan dikirim lewat aplikasi email perangkat Anda ke <a href="mailto:sekretariat@pakki.id">sekretariat@pakki.id</a>.</p>
+            </div>
+
+            <div class="contact-result" id="contact-result" aria-live="polite"></div>
+          </form>
+        </div>
+
+        <aside class="contact-side" aria-label="Informasi sekretariat">
+          <div class="contact-block">
+            <span class="contact-lbl">Email resmi</span>
+            <a class="contact-mail" href="mailto:sekretariat@pakki.id">sekretariat@pakki.id</a>
+            <p>Seluruh pesan dari formulir diarahkan ke alamat ini dan dibaca oleh pengurus DPP.</p>
+          </div>
+
+          <div class="contact-block">
+            <span class="contact-lbl">Sekretariat</span>
+            <p>Dewan Pengurus Pusat PAKKI<br>Jakarta, Indonesia<br><span class="muted">Alamat lengkap menyusul.</span></p>
+          </div>
+
+          <div class="contact-block">
+            <span class="contact-lbl">Sebelum mengirim</span>
+            <ul class="contact-tips">
+              <li>Sertakan nomor anggota bila pesan terkait status keanggotaan.</li>
+              <li>Sebutkan institusi dan kota Anda agar balasan lebih tepat.</li>
+              <li>Untuk urusan resmi organisasi, pakai email institusi.</li>
+            </ul>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="kontak">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/logo-pakki-white.png" alt="PAKKI">
+        <p>Perhimpunan Ahli Kesehatan Kerja Indonesia. Menghimpun dan mengembangkan profesi kesehatan kerja di seluruh Indonesia.</p>
+        <div class="foot-social">
+          <a href="https://www.instagram.com/pakki_pusat/" target="_blank" rel="noopener" aria-label="Instagram PAKKI"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://youtube.com/@pakkigroup7712" target="_blank" rel="noopener" aria-label="YouTube PAKKI"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Organisasi</h4>
+        <div class="foot-links">
+          <a href="index.html#tentang">Tentang PAKKI</a>
+          <a href="index.html#nilai">Nilai Organisasi</a>
+          <a href="index.html#lambang">Makna Lambang</a>
+          <a href="struktur.html">Struktur Organisasi</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Keanggotaan</h4>
+        <div class="foot-links">
+          <a href="keanggotaan.html#verifikasi">Cek Status Anggota</a>
+          <a href="keanggotaan.html#registrasi">Registrasi Anggota</a>
+          <a href="keanggotaan.html#iuran">Iuran &amp; Pembayaran</a>
+          <a href="keanggotaan.html#kta-digital">KTA Digital</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Sekretariat</h4>
+        <div class="foot-contact">
+          <div>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            <span>Jakarta, Indonesia<br>(alamat lengkap menyusul)</span>
+          </div>
+          <div>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            <a href="mailto:sekretariat@pakki.id">sekretariat@pakki.id</a>
+          </div>
+          <div>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2z"/></svg>
+            <a href="kontak.html">Formulir kontak</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span>&copy; <span id="year">2026</span> PAKKI - Perhimpunan Ahli Kesehatan Kerja Indonesia</span>
+    </div>
+  </div>
+</footer>
+
+<div class="backdrop" id="backdrop" hidden></div>
+<aside class="drawer" id="drawer" aria-label="Menu navigasi" aria-hidden="true" inert>
+  <div class="drawer-head">
+    <span class="brand">
+      <img src="assets/logo-pakki.png" alt="PAKKI">
+      <span class="word"><b>PAKKI</b></span>
+    </span>
+    <button class="drawer-close" id="drawer-close" aria-label="Tutup menu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <nav class="drawer-nav" aria-label="Navigasi seluler">
+    <a href="index.html">Tentang</a>
+    <a href="struktur.html">Struktur</a>
+    <a href="keanggotaan.html">Keanggotaan</a>
+    <a href="berita.html">Berita</a>
+    <a href="kontak.html" aria-current="page">Kontak</a>
+  </nav>
+  <div class="drawer-foot">
+    <a class="btn btn-primary" href="keanggotaan.html#verifikasi">Cek Status Anggota</a>
+    <a class="btn btn-ghost" href="keanggotaan.html#registrasi">Registrasi Anggota</a>
+  </div>
+</aside>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

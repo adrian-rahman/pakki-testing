@@ -6,7 +6,7 @@
 ## 1. Product Overview (Gambaran Umum Produk)
 
 * **Nama Produk:** Platform Website Resmi PAKKI.
-* **Tujuan Utama:** Menyediakan portal digital terpusat yang memuat profil organisasi sesuai AD/ART (Periode 2022–2027), wadah publikasi berita/kegiatan ilmiah, serta sistem pendaftaran (*online registration*) dan verifikasi keanggotaan profesi kesehatan kerja di Indonesia.
+* **Tujuan Utama:** Menyediakan portal digital terpusat yang memuat profil organisasi sesuai AD/ART (Periode 2022-2027), wadah publikasi berita/kegiatan ilmiah, serta sistem pendaftaran (*online registration*) dan verifikasi keanggotaan profesi kesehatan kerja di Indonesia.
 * **Target Pengguna:**
   * **Calon Anggota / Praktisi:** Tenaga ahli kesehatan & keselamatan kerja, dokter perusahaan, perawat okupasi (*occupational health nurse*), dan higienis industri yang ingin bergabung.
   * **Anggota Aktif:** Praktisi yang memerlukan informasi pelatihan (*Continuing Professional Development*), agenda organisasi, dan pembaruan regulasi.
